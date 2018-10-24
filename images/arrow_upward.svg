@@ -1,0 +1,16 @@
+<svg width="319" height="341" viewBox="0 0 319 341" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="Group">
+<g id="Rectangle">
+<rect width="10" height="225" transform="matrix(0.707107 0.707107 -0.707107 0.707107 159.099 0)" fill="white"/>
+</g>
+<g id="Rectangle_2">
+<path d="M 0 0L 10 0L 10 225L 0 225L 0 0Z" transform="matrix(0.707107 -0.707107 0.707107 0.707107 152 7.07104)" fill="white"/>
+</g>
+<g id="Rectangle_3">
+<path d="M 0 0L 10 0L 10 328L 0 328L 0 0Z" transform="translate(154 13)" fill="white"/>
+</g>
+</g>
+</g>
+</svg>
+

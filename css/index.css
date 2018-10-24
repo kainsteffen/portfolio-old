@@ -1,0 +1,1007 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+
+*,* ::before,* ::after
+{
+     box-sizing: border-box;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+h1
+{
+    font-weight: 100;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+em
+{
+    color: #DC4C43;
+    font-style: unset;
+}
+
+button
+{
+   background: none;
+   border: none;
+   color: inherit;
+}
+
+.altNavbar
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #1B1B1B;
+    z-index: 10;
+}
+
+.altNavbar ul
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.altNavbar ul li
+{
+    transition: ease-in-out 0.3s;
+    transition-delay: 0.5s;
+
+}
+
+.altNavbar ul li.hidden
+{
+    transform: translateY(100%);
+
+    transition: ease-in-out 0.3s;
+}
+
+.altNavbar .navBarHide
+{
+    position: relative;
+    height: 2.5em;
+    z-index: 20;
+    background-color: var(--main-color);
+
+}
+
+.altNavbar ul li a
+{
+    position: relative;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.navbarToggle
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 15;
+}
+
+.navbarToggle .iconBar
+{
+    width: 50px;
+    height: 1px;
+
+    margin: 0 0 15px 0;
+    background-color: white;
+
+    transition: 0.4s;
+}
+
+.navbarToggle.collapsed .iconBar.top
+{
+    transform: rotate(45deg) translate(12px, 16px);  
+}
+
+.navbarToggle.collapsed .iconBar.middle
+{
+    opacity: 0;
+}
+
+.navbarToggle.collapsed .iconBar.bottom
+{
+    transform: rotate(-45deg) translate(6px, -10px);
+}
+
+
+.topButton
+{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;   
+}
+
+.topButton img
+{
+    width: 50px;
+    height: 50px;
+}
+
+*:focus
+{
+    outline: none;
+}
+
+:root
+{
+    --main-color: #1B1B1B;
+}
+
+html
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+body
+{
+    height: 100%;
+    min-height:100%;
+
+    background-color: var(--main-color);
+}
+
+#hideAll
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+    z-index: 9999;
+    background: var(--main-color);
+}
+
+main
+{
+   width: auto;
+}
+
+header
+{
+   position: fixed;
+   width: 100%;
+   top: 0;
+   background-color: var(--main-color);
+   padding-top: 1%;
+   padding-bottom: 1%;
+   z-index: 10;
+}
+
+header #pageTitle
+{
+   font-size: 16px;
+   margin: 10px;
+   float: left;
+   margin-left: 20%;
+}
+
+header #pageTitle h1
+{
+   margin: 0;
+}
+
+header a
+{
+   text-decoration: none;
+   color: white;
+
+}
+
+.active:after
+{
+   content: "";
+   position: absolute;
+   right: 0;
+   bottom: -10px;
+   background-color: white;
+   width: 100%;
+   height: 1px;
+   visibility: visible;
+
+   -webkit-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+header nav
+{
+   float: right;
+   margin-right: 20%;
+}
+
+header nav ul
+{
+   margin: 0;
+   padding: 0;
+}
+
+header nav ul li
+{
+    display: inline-block;
+}
+
+header nav ul li a
+{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0 10px 30px;
+}
+
+header nav ul li a:after
+{
+   content: "";
+   position: absolute;
+   right: 0;
+   bottom: -10px;
+   background-color: white;
+   width: 0;
+   height: 3px;
+   visibility: hidden;
+
+   -webkit-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+header nav ul li a:hover:after
+{
+   visibility: visible;
+   width: 100%;
+   height: 1px;
+}
+
+#parallax
+{
+
+}
+
+#parallax div
+{
+    text-align: center;
+    width: 100%;
+}
+
+#parallax  #layer1
+{
+   height: 100%;
+   z-index: 1;
+}
+
+#parallax  #layer2
+{
+   height: 100%;
+   z-index: 0;
+}
+
+#parallax  #entryHeader
+{
+   font-size: 50px;
+   margin: 0;
+}
+
+#parallax  #entrySub
+{
+   display: inline-block;
+   font-size: 25px;
+   margin-top: 0.2%;
+}
+
+#parallax #entryBracket
+{
+   font-size: 50px;
+   margin: 0;
+}
+
+#parallax span
+{
+   background-color: var(--main-color);
+}
+
+#parallax  #dots1
+{
+   z-index: -1;
+}
+
+#parallax  #dots2
+{
+   z-index: -1;
+}
+
+#parallax  #dots3
+{
+   z-index: -1;
+}
+
+.separator
+{
+    position: relative;
+    height: auto;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    padding: 0 3% 0 3%;
+}
+
+.separator h2
+{
+   display: inline-block;
+    position: relative;
+   width: max-content;
+
+   font-weight: 100;
+   user-select: none;
+   background-color: var(--main-color);
+
+   margin: 0;
+   padding: 0 2% 0 2%;
+
+   z-index: 1;
+}
+
+.separator .separatorLine
+{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 18px;
+    width: 0;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.separator .animate
+{
+   animation-name: growHorizontal;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+   animation-timing-function: ease-in-out;
+}
+
+@keyframes growHorizontal
+{
+   0%
+   {
+        width: 0%;
+   }
+   100%
+   {
+        width: 80%;
+   }
+}
+
+.separator .arrowDown
+{
+    position: absolute;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation-name: hovering;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes hovering
+{
+   0%
+   {
+      top: 25px;
+   }
+   50%
+   {
+      top: 35px;
+   }
+   100%
+   {
+      top: 25px;
+   }
+}
+
+#work
+{
+   height: auto;
+   padding: 0 20% 0 20%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+#work .project
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+    opacity: 0;
+
+    border-radius: .2rem;
+
+    margin-bottom: 100px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+#work .project:hover
+{
+   transform: scale(.98);
+}
+
+#work .project.animate
+{
+    animation-name: slideInBelow;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+ @keyframes slideInBelow
+ {
+     0%
+     {
+         transform: translateY(50%);
+         opacity: 0;
+     }
+     100%
+     {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ #work #polywar
+ {
+     background-color: #EB6767;
+ }
+
+ #work #upwards
+ {
+    background-color: #3298DB;
+ }
+
+ #work #profits
+ {
+    background-color: #939ADE;
+ }
+
+ #work .project img
+{
+   position: absolute;
+   right: 0;
+   height: 100%;
+   border-radius: .2rem;
+
+   /*box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+               0 3px 6px rgba(0,0,0,0.23);*/
+
+   background: #114357;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to top, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to top, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   transition: all 0.3s ease-in-out;
+}
+
+#work .project div
+{
+   display: inline-block;
+   position: absolute;
+   left: 5%;
+   width: auto;
+}
+
+#work .project .projectTitle
+{
+   top: 5%;
+   font-size: 40px;
+}
+
+#work .project .projectDescription
+{
+   top: 50%;
+   transform: translateY(-50%);
+   width: 30%;
+
+   text-align: left;
+   font-size: 40px;
+}
+
+#work .project .projectType
+{
+   bottom: 5%;
+}
+
+#about
+{
+
+   margin: 5% 20% 5% 20%;
+   width: auto;
+
+
+}
+
+#about p
+{
+    line-height: 1.5;   
+}
+
+#about.animate
+{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+}
+
+#about .selfintroduction
+{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin: 0 0 10% 0;
+
+}
+
+#about .selfintroduction .profilePicture
+{
+   display: inline-block;
+   margin: 0;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+}
+
+
+#about .selfintroduction .selfdescription
+{
+   text-align: left;
+   padding: 0 0 0 5%;
+}
+
+#about .mottoGroup
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 10% 0;
+}
+
+#about .mottoGroup .mottoHeader
+{
+    position: relative;
+    font-size: 1.5em;
+    width: 100%;  
+    margin: 0 0 5% 0;  
+    text-align: center;
+
+}
+
+#about .mottoGroup .mottoHeader:after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 5%;
+    height: 160%;
+
+    border-bottom: 1px solid white;
+}
+
+#about .mottoGroup .motto
+{
+    width: 27%;
+}
+
+#about .mottoGroup .motto h3
+{
+    font-size: 1.5em;
+    font-weight: 100;
+    padding: 0 0 1% 5%;
+    margin: 0 0 5% 0;
+
+    border-left: 1px solid white;
+}
+
+#about .mottoGroup .motto p
+{
+    padding: 0 0 0 5%;
+}
+
+.interests
+{
+
+}
+
+.interests .interestsGroup
+{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.interests h3
+{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.interests h3:after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 5%;
+    height: 160%;
+
+    border-bottom: 1px solid white;
+}
+
+
+.interests.animate
+{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+}
+
+.interests .interestsColumn
+{
+    width: 30%;
+    text-align: center;
+}
+
+.interests .interestsColumn img
+{
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    border-radius: 50%;
+    margin-bottom: 5%;  
+}
+
+.interests .interestsColumn #photography
+{
+    background-color: #006699;
+}
+
+.interests .interestsColumn #fitness
+{
+    background-color: #16A085;
+}
+
+.interests .interestsColumn #gaming
+{
+    background-color: #C0392B;
+}
+
+.interests .interestsColumn p
+{
+    display: none;
+    width: 100%;
+    /*text-align: left;*/
+}
+
+#contact
+{
+   margin: 0 20% 0 20%;
+}
+
+#contact.animate
+{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#contact .contactHeader
+{
+   margin: 5% 20% 5% 20%;
+   width: auto;
+   text-align: center;
+}
+
+#contact .contactHeader .contactMainHeader
+{
+   font-size: 50px;
+   margin-bottom: 5%;
+}
+
+#contact .contactHeader .contactSubHeader
+{
+   font-size: 25px;
+}
+
+#contact .contactInfo
+{
+    margin: 0 0 5% 0;
+    text-align: center;
+}
+
+.contactForm
+{
+    display: block;
+    width: auto;
+    margin: 0 10% 5% 10%;
+    padding: 0 15% 0 15%;
+
+    overflow: auto;
+}
+
+.contactForm div
+{
+    width: fit-content;
+}
+
+.contactForm input[type=text]
+{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    padding: 10px;;
+    width: 100%;
+
+    color: white;
+    background-color: transparent;
+
+    border: 1px solid #ffffff;
+    border-radius: 1px;
+}
+
+.contactForm textarea
+{
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 1px;
+}
+
+.contactForm input[type=submit]
+{
+    float: right;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contactForm input[type=submit]:hover
+{
+    background-color: white;
+    color: var(--main-color);
+}
+
+.contactForm.animate
+{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+}
+
+.socialMediaLinks
+{
+    text-align: center;
+}
+
+.socialMediaLinks a
+{
+    text-decoration: none;
+}
+
+.socialMediaLinks img
+{
+    width: 35px;
+    margin: 0 10px 0 10px;
+
+    transition:  all 0.2s ease-in-out;
+}
+
+.socialMediaLinks img:hover
+{
+    transform: scale(1.2);
+}
+
+footer
+{
+    width: auto;
+    text-align: center;
+    margin: 1%;
+
+    font-size: 0.8em;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px)
+    {
+    /* Styles */
+    }
+
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (min-width : 321px)
+    {
+    /* Styles */
+    }
+
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width : 320px)
+    {
+    /* Styles */
+    }
+
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+    {
+    /* Styles */
+    }
+
+    /* iPads (landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+    {
+    /* Styles */
+    }
+
+    /* iPads (portrait) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    {
+    /* Styles */
+    }
+    /**********
+    iPad 3
+    **********/
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+    {
+    /* Styles */
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 1224px)
+    {
+    /* Styles */
+    }
+
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px)
+    {
+    /* Styles */
+    }
+
+    /* iPhone 4 ----------- */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+    {
+    /* Styles */
+    }
+
+    /* iPhone 5 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    /* iPhone 6 ----------- */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    /* iPhone 6+ ----------- */
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    /* Samsung Galaxy S3 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)
+    {
+    /* Styles */
+    }
+
+    /* Samsung Galaxy S4 ----------- */
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)
+    {
+    /* Styles */
+    }
+
+    /* Samsung Galaxy S5 ----------- */
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)
+    {
+    /* Styles */
+    }
+
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)
+    {
+    /* Styles */
+    }
